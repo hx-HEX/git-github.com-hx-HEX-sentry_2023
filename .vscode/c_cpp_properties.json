@@ -1,0 +1,39 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Core/Inc",
+                "${workspaceFolder}/Bsp/gpio",
+                "${workspaceFolder}/Bsp/communication",
+                "${workspaceFolder}/Bsp/bmi088",
+                "${workspaceFolder}/Bsp/gimbal",
+                "${workspaceFolder}/Bsp/vofa",
+                "${workspaceFolder}/Bsp/encoder",
+                "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc",
+                "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+                "${workspaceFolder}/Drivers/CMSIS/Include",
+                "${workspaceFolder}/Middlewares/FreeRTOS/include",
+                "${workspaceFolder}/Middlewares/FreeRTOS/portable/GCC/ARM_CM4F",
+                "${workspaceFolder}/UserApp/protocol",
+                "${workspaceFolder}//UserApp/config",
+                "${workspaceFolder}/UserApp",
+                "${workspaceFolder}/Robot/actuators",
+                "${workspaceFolder}/Robot/instances",
+                "${workspaceFolder}/Robot/algorithms"
+            ],
+            "defines": [
+                "USE_HAL_DRIVER",
+                "STM32F407xx"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.makefile-tools"
+        }
+    ],
+    "version": 4
+}

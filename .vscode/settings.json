@@ -1,0 +1,26 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "files.associations": {
+        "stm32f4xx_hal.h": "c",
+        "stm32f4xx_hal_conf.h": "c",
+        "main.h": "c",
+        "common_inc.h": "c",
+        "global.h": "c",
+        "gpio.h": "c",
+        "user_main.h": "c",
+        "time.h": "c",
+        "errno.h": "c",
+        "retarget.h": "c",
+        "cmath": "cpp",
+        "can_interface.h": "c",
+        "thread": "cpp",
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "limits": "cpp",
+        "type_traits": "cpp",
+        "usart.h": "c",
+        "iostream": "cpp"
+    },
+    "commentTranslate.targetLanguage": "en"
+}

@@ -1,0 +1,99 @@
+{
+    //Linux
+    "version": "2.0.0",
+    "options": {
+        "cwd": "${workspaceFolder}" // 默认在当前文件根目录下进行编译操作
+    },
+    "tasks": [
+        {
+            "label": "Build Release",
+            "type": "shell",
+            "command": "rm -rf build && mkdir -p build && cd build && cmake -DCMAKE_BUILD_TYPE=Release .. && make -j8",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Build Debug",
+            "type": "shell",
+            "command": "rm -rf build && mkdir -p build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug .. && make -j8",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            } 
+        },
+        {
+            "label": "Build RelWithDebInfo",
+            "type": "shell",
+            "command": "rm -rf build && mkdir -p build && cd build && cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo .. && make -j8",
+        },
+        {
+            "label": "Build MinSizeRel",
+            "type": "shell",
+            "command": "rm -rf build && mkdir -p build && cd build && cmake -DCMAKE_BUILD_TYPE=MinSizeRel .. && make -j8",
+        }
+    ]
+
+    // Windows
+//     "version": "2.0.0",
+//     "options": {
+//         "cwd": "${workspaceFolder}/build" // 默认在当前文件根目录下进行编译操作
+//     },
+//     "tasks": [
+//     {
+//         "label": "Build Debug (win)",
+//         "dependsOrder": "sequence",
+//         "dependsOn": [
+//             "cmake debug (win)",
+//             "make (win)"
+//         ],
+//         "group": {
+//             "kind": "build",
+//             "isDefault": true
+//         }
+//     },
+//     {
+//         "label": "Build Release (win)",
+//         "dependsOrder": "sequence",
+//         "dependsOn": [
+//             "cmake release (win)",
+//             "make (win)"
+//         ],
+//         "group": {
+//             "kind": "build",
+//             "isDefault": false
+//         }
+//     },
+//     {
+//         "label": "cmake debug (win)",
+//         "type": "shell",
+//         "command": "cmake",
+//         "args": [
+//             "-G",
+//             "MinGW Makefiles",
+//             "${workspaceFolder}",
+//             "-DCMAKE_BUILD_TYPE=Debug"
+//         ]
+//     },
+//     {
+//         "label": "cmake release (win)",
+//         "type": "shell",
+//         "command": "cmake",
+//         "args": [
+//             "-G",
+//             "MinGW Makefiles",
+//             "${workspaceFolder}",
+//             "-DCMAKE_BUILD_TYPE=Release"
+//         ]
+//     },
+//     {
+//         "label": "make (win)",
+//         "type": "shell",
+//         "command": "mingw32-make",
+//         "args": [
+//             "-j8"
+//         ]
+//     }
+// ]
+}
